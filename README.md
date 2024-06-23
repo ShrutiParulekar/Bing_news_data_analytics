@@ -59,22 +59,22 @@ In this data transformation project, I utilized Synapse Data Engineering to proc
 
 To ensure efficient data updates, I implemented incremental loading instead of overwriting the entire dataset. Incremental loading is preferred as it allows for the addition of new data without reprocessing the entire dataset, saving time and computational resources. This method reduces the risk of data loss and maintains historical data integrity, ensuring that only new or updated records are added to the Delta table. This approach is crucial for handling large datasets where frequent updates are necessary, providing a more efficient and scalable solution.
 
-- **[Link of the Python Notebook](https://github.com/ShrutiParulekar/Bing_news_data_analytics/blob/main/Power%20BI%20dashboard/News-dashboard.pdf)** 
-- **Link of the Dataset Created:** Data transformation/main_data.csv
+- **[Link of the Python Notebook](https://github.com/ShrutiParulekar/Bing_news_data_analytics/blob/main/Data%20transformation/Process%20bing%20news%20%20transform.ipynb)** 
+- **[Link of the Dataset Created](https://github.com/ShrutiParulekar/Bing_news_data_analytics/blob/main/Data%20transformation/main_data.csv)**
 
 ## Sentiment Analysis using Synapse ML
 
 In this section of the project, I performed sentiment analysis using Synapse Data Science within Microsoft Fabric. I began by accessing the Synapse Data Science workspace and creating a new notebook. I attached the existing Lakehouse database (Bing_Lake_DB) to the notebook to access the clean Delta table. Using Synapse ML, I imported the pre-trained TextBlob model and configured it to analyze the description column of the news articles for sentiment. After applying the model, I extracted the sentiment values and cleaned the DataFrame by removing unnecessary columns. Finally, I used incremental loading with Python Merge logic to write the final DataFrame back to the Lakehouse database as a Delta table named `TBL_Sentiment_Analysis`, ensuring efficient data updates and maintaining historical data integrity.
 
-- **Link of the Python Notebook:** Sentiment analysis
-- **Link of the Dataset Created:** Sentiment analysis/sentiment analysis.csv
+- **[Link of the Python Notebook](https://github.com/ShrutiParulekar/Bing_news_data_analytics/blob/main/Sentiment%20analysis/Sentiment%20Analysis%20Final.ipynb)** 
+- **[Link of the Dataset Created](https://github.com/ShrutiParulekar/Bing_news_data_analytics/blob/main/Sentiment%20analysis/sentiment%20analysis.csv)**
 
 ## PowerBI Dashboard for Sentiment Analysis of Latest News
 
 I created a PowerBI dashboard connected to the Lakehouse database using a semantic model. This dashboard displays the latest news and includes sentiment analysis, showing the percentage of positive, negative, and neutral sentiments based on the news descriptions stored in the database.
 
-- **PowerBI file:** Power BI dashboard/News-dashboard.pbix
-- **PDF File:** Power BI dashboard/News-dashboard.pdf
+- **[PowerBI file](https://github.com/ShrutiParulekar/Bing_news_data_analytics/blob/main/Power%20BI%20dashboard/News-dashboard.pbix)** 
+- **[PDF File](https://github.com/ShrutiParulekar/Bing_news_data_analytics/blob/main/Power%20BI%20dashboard/News-dashboard.pdf)** 
 
 <img width="1227" alt="Screen Shot 2024-06-23 at 4 19 21 PM" src="https://github.com/ShrutiParulekar/Bing_news_data_analytics/assets/30751858/2c640a25-3203-48e7-9ef4-ec32626fe173">
 
