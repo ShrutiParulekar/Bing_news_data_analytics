@@ -59,7 +59,7 @@ In this data transformation project, I utilized Synapse Data Engineering to proc
 
 To ensure efficient data updates, I implemented incremental loading instead of overwriting the entire dataset. Incremental loading is preferred as it allows for the addition of new data without reprocessing the entire dataset, saving time and computational resources. This method reduces the risk of data loss and maintains historical data integrity, ensuring that only new or updated records are added to the Delta table. This approach is crucial for handling large datasets where frequent updates are necessary, providing a more efficient and scalable solution.
 
-- **Link of the Python Notebook:** Data transformation/Process bing news  transform.ipynb
+- **[Link of the Python Notebook](https://github.com/ShrutiParulekar/Bing_news_data_analytics/blob/main/Power%20BI%20dashboard/News-dashboard.pdf)** 
 - **Link of the Dataset Created:** Data transformation/main_data.csv
 
 ## Sentiment Analysis using Synapse ML
